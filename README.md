@@ -1,6 +1,6 @@
 ## Development of a fall-related injury risk prediction model for inpatients based on the multimodal automated machine learning framework
 
-This repository provides the key steps for developing multimodal risk prediction models for different degrees of Fall-related Injuries (FRIs). It utilizes an automated machine learning tool (the AutoGluon-Tabular framework) enhanced by multimodal approaches.
+This repository contains the supplementary materials associated with the implementation of our submission titled "Development of a fall-related injury risk prediction model for inpatients based on the multimodal automated machine learning framework." . It utilizes an automated machine learning tool (the AutoGluon-Tabular framework) enhanced by multimodal approaches.
 
 ### Prepare data for model building
 FRI data were retrospectively collected from three Chinese tertiary-level general hospitals from January 1, 2013 to April 30, 2023.
@@ -246,7 +246,7 @@ outliers = [X_df.loc[i] for i, p in enumerate(predictions) if p == -1]
 print(outliers)
 ```
 ### Build the predictive model
-1. Identify independent variables that predominantly take a single value
+1. Identify independent (binary) variables that predominantly take a single value
 ```
 for col in selected_cols:
     if df[col].sum() < threshold:
